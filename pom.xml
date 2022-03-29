@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.gx</groupId>
-	<artifactId>f1_email</artifactId>
+	<artifactId>f1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>f1_email</name>
 	<description>Email Receiver</description>

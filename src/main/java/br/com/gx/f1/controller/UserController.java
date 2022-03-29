@@ -1,4 +1,4 @@
-package br.com.gx.f1_email.controller;
+package br.com.gx.f1.controller;
 
 import javax.validation.Valid;
 
@@ -9,19 +9,19 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.gx.f1_email.controller.request.RequestEmail;
-import br.com.gx.f1_email.model.Email;
-import br.com.gx.f1_email.repo.EmailRepository;
+import br.com.gx.f1.controller.request.RequestUser;
+import br.com.gx.f1.model.User;
+import br.com.gx.f1.repo.UserRepository;
 
 @RestController
 @RequestMapping("/email")
-public class EmailController {
+public class UserController {
 
 	@Autowired
-	private EmailRepository emailRepository;
+	private UserRepository emailRepository;
 
 	@PostMapping
-	public ResponseEntity<?> saveEmail(@RequestBody @Valid RequestEmail req) {
+	public ResponseEntity<?> saveEmail(@RequestBody @Valid RequestUser req) {
 
 		String email = req.getEmail();
 
@@ -29,7 +29,7 @@ public class EmailController {
 			return ResponseEntity.badRequest().build();
 		}
 
-		emailRepository.save(new Email(email));
+		emailRepository.save(new User(email, req.getNome()));
 
 		return ResponseEntity.ok().build();
 

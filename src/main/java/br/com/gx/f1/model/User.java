@@ -1,4 +1,4 @@
-package br.com.gx.f1_email.model;
+package br.com.gx.f1.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,18 +6,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Email {
+public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+	private String nome;
 	private String email;
 
-	public Email() {
+	public User() {
 	}
-	
-	public Email(String email) {
+
+	public User(String nome, String email) {
+		this.nome = nome;
 		this.email = email;
 	}
 
@@ -35,6 +36,14 @@ public class Email {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 }

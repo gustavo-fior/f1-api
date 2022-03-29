@@ -1,13 +1,13 @@
-package br.com.gx.f1_email;
+package br.com.gx.f1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class F1EmailApplication {
+public class F1Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(F1EmailApplication.class, args);
+		SpringApplication.run(F1Application.class, args);
 	}
 
 }

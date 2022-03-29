@@ -1,4 +1,4 @@
-package br.com.gx.f1_email.webconfig;
+package br.com.gx.f1.webconfig;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
