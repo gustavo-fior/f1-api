@@ -29,7 +29,7 @@ public class UserController {
 			return ResponseEntity.badRequest().build();
 		}
 
-		emailRepository.save(new User(email, req.getNome()));
+		emailRepository.save(new User(req.getNome(), email));
 
 		return ResponseEntity.ok().build();
 
